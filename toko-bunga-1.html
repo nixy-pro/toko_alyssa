@@ -18,86 +18,103 @@
     <title>Alysaa Florist</title>
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f3f3f3;
-        }
-        .slider {
-            width: 80%;
-            max-width: 600px;
-            height: 400px;
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-        .slides {
-            width: 500%;
-            height: 100%;
-            display: flex;
-        }
-        .slides input {
-            display: none;
-        }
-        .slide {
-            width: 20%;
-            transition: 0.6s;
-        }
-        .slide img {
-            width: 100%;
-            height: 100%;
-        }
-        .navigation-auto {
-            position: absolute;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-top: 370px;
-        }
-        .navigation-auto div {
-            border: 2px solid #fff;
-            padding: 5px;
-            border-radius: 10px;
-            transition: 1s;
-        }
-        .navigation-auto div:not(:last-child) {
-            margin-right: 20px;
-        }
-        #radio1:checked ~ .first {
-            margin-left: 0;
-        }
-        #radio2:checked ~ .first {
-            margin-left: -20%;
-        }
-        #radio3:checked ~ .first {
-            margin-left: -40%;
-        }
-        .navigation-manual {
-            position: absolute;
-            width: 100%;
-            margin-top: -40px;
-            display: flex;
-            justify-content: center;
-        }
-        .manual-btn {
-            border: 2px solid #fff;
-            padding: 5px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: 1s;
-        }
-        .manual-btn:not(:last-child) {
-            margin-right: 20px;
-        }
-        .manual-btn:hover {
-            background: #fff;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+}
+
+.slider {
+    width: 80%; /* Ubah lebar slider di sini */
+    max-width: 600px; /* Ubah lebar maksimal slider di sini */
+    height: 400px; /* Ubah tinggi slider di sini */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%; /* Ubah lebar slide di sini (persentase dari lebar slider) */
+    transition: 0.6s;
+}
+
+.slide img {
+    width: 100%; /* Ubah lebar gambar agar menyesuaikan dengan slide */
+    height: auto; /* Ubah tinggi gambar agar menyesuaikan dengan slide */
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 370px;
+}
+
+.navigation-auto div {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 20px;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 20px;
+}
+
+.manual-btn:hover {
+    background: #fff;
+}
+
     </style>
 </head>
 <body>
