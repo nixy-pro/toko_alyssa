@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeri gambar yang dapat digeser dengan tiga gambar yang indah. Nikmati pengalaman melihat gambar dengan mudah dan interaktif.">
+    <meta name="keywords" content="galeri gambar, slider gambar, geser gambar, HTML, CSS, JavaScript">
+    <meta name="author" content="Nama Anda">
+    <title>Galeri Gambar Geser</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+        }
+        .slider {
+            width: 80%;
+            max-width: 600px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slides {
+            width: 500%;
+            height: 100%;
+            display: flex;
+        }
+        .slides input {
+            display: none;
+        }
+        .slide {
+            width: 20%;
+            transition: 0.6s;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+        }
+        .navigation-auto {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 370px;
+        }
+        .navigation-auto div {
+            border: 2px solid #fff;
+            padding: 5px;
+            border-radius: 10px;
+            transition: 1s;
+        }
+        .navigation-auto div:not(:last-child) {
+            margin-right: 20px;
+        }
+        #radio1:checked ~ .first {
+            margin-left: 0;
+        }
+        #radio2:checked ~ .first {
+            margin-left: -20%;
+        }
+        #radio3:checked ~ .first {
+            margin-left: -40%;
+        }
+        .navigation-manual {
+            position: absolute;
+            width: 100%;
+            margin-top: -40px;
+            display: flex;
+            justify-content: center;
+        }
+        .manual-btn {
+            border: 2px solid #fff;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+        .manual-btn:not(:last-child) {
+            margin-right: 20px;
+        }
+        .manual-btn:hover {
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1" checked>
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <div class="slide first">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGDQg0rImV0x9x_ER7FntHxrovNMaNmGGF2qkHN4lOqbTfasyMD-hka2BbxEnEy5g_i2UGDkqifWzJeUHCkj-N9k06IyEiYW6nMBmPCeOYT32n33dTDU-HqIN97fyH3J_-r41HAkfTXNA/s340-c/64494ed2-ca7b-4b28-aed9-2160767fe78e.jpg" alt="Alyssa Florist">
+            </div>
+            <div class="slide">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEisPfV7WOt3VeuLPvgqnGpzfgm5YXWqJ7qqpmI2ScWYv_lGRUjRmEjJiOqvPF1LjtovPWA_5Rk-jiymMXEmTgTPuYBdafsU_bPa5fz9kApfkyzR_oLFC-XCFqBtB08XZwHhEHI5EklVGBI/s340-c/53be1893-1f17-4735-815e-1906cbc971a8.jpg" alt="Alyssa Florist">
+            </div>
+            <div class="slide">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigMcf_PYgdNH7DY2xJ6UdNgZL1F3z-iOeDbhyphenhyphenhxgaIEsf0gyukSQYpj9tbAF0N-0DM9zlNG0-CuKIlv1aDWDn3greX4W_UZhZHoMJv3i9vZ6GwCA1XU9arIWKIofzUEnMXnT8dWz6lNac/s340-c/fd9862f6-a378-461f-8a27-87646cacd0ea.jpg" alt="Alyssa Florist">
+            </div>
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+    </div>
+    <script>
+        let counter = 1;
+        setInterval(function() {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 3) {
+                counter = 1;
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
