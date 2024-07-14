@@ -102,4 +102,10 @@
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
+    <url>
+        <loc>https://www.alyssaflorist.com/tokobuketcianjur</loc>
+        <lastmod>2024-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
 </urlset>
