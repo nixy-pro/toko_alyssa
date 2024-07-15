@@ -1,0 +1,12 @@
+defaults:
+  # Set Cache-Control headers for static files
+  - scope:
+      path: ""
+      type: "css"
+    values:
+      cache-control: "max-age=31536000"
+  - scope:
+      path: ""
+      type: "js"
+    values:
+      cache-control: "max-age=31536000"
